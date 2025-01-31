@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+.bigcon{
+    display: grid;
+    grid-template-columns: auto auto ;
+    column-gap: 50px;
+
+}
+#con{
+    border: 0px solid;
+}
+#container {
+  display: grid;
+  grid-template-columns: auto auto ;
+  background-color: rgba(19, 137, 255, 0);
+  padding: 20px 0px 20px 0px;
+
+}
+#container > #top,.top {
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    transition: 0.3s;
+    place-items: center;
+  margin: 20px;
+  padding: 10px;
+  min-width: 300px;
+  max-height: 250px;
+  min-height: auto;
+  font-size: 30px;
+  text-align: center;
+}
+.lil,.sc,.li,#cl{
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 2rem;
+    width: 90%;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    transition: 0.8s ease-in-out;
+}
+
+.li{
+    color: aliceblue;
+}
+
+#cl{
+    background-color: red;
+    color:white ;
+    font-size: 8px;
+    width: 90%;
+}
+.lil{
+    background-color: rgb(255, 3, 3);
+    border: 1px solid  rgb(0, 0, 0);
+    min-width: 100%;
+    color: white;
+    transition: ease-in-out 1s;
+}
+.lil:hover{
+    color: red;
+    background-color: white;
+    transition: ease-in-out 1s;
+}
+.sc{
+    background-color: rgb(141, 190, 66);
+    border: 1px solid rgba(0, 0, 0, 0.983);
+
+}
+#tex{
+    font-size: xx-large;
+}
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+}
+
+.con {
+    min-width:200px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    transition: 0.3s;
+    margin: 20px;
+    margin-bottom: 40px;
+    min-height: 500px;
+}
+
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+l{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    margin-top: -50px;
+}
+input{
+    background-color: #04070f7c;
+    font-size: 30px;
+    border: 0px solid;
+
+    border-radius: 0.5rem;
+    color: #ff004c62;
+    transition: 1s ease-in;
+}
+input:hover{
+    border-radius: 1rem;
+    transition: 1s ease-out;
+}
+#ad{
+    padding: 3px;
+    background-color: #04070f;
+    font-size: 30px;
+    border: 0px solid;
+    width: 40px;
+    border-radius: 0.5rem;
+    color: #ff004c;
+}
+#ad:hover{
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+}
+#start{
+    padding: 35px;
+    background-color: #16213e;
+    border: 0px solid;
+    border-radius: 1rem;
+    color: #ff004c;
+}
+#start:hover{
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+
+}
+#play:hover{
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);}
+
+#play{
+    background-color: #16213e;
+    border: 0px solid;
+    color: #ff004c;
+    padding: 30px;
+    border-radius: 1rem;
+    height: 120px;
+}
+
+#start img ,#play img{
+    height: 60px;
+
+}
+#tex{
+    background-color: #16213e;
+    width: 80%;
+    height: 50px;
+    color: #e55353;
+    border-radius: 0.4rem;
+}
+</style>
+</head>
+
+
+<body>
+
+    <div id="con">
+        <h1>Russian Roulette</h1>
+    </div>
+    <l>From Liar's Bar</l>
+
+<form style=" margin: 10px;">
+    <input id="inp" type="text" value="">
+    <button type="button" onclick="add()"   id="ad" >+</button> 
+</form>
+
+
+<audio id="shoot" src="shoot.m4a" preload="auto"></audio>
+<audio id="theme" src="theme.m4a" preload="auto" loop></audio>
+<audio id="p1" src="p1 (mp3cut.net).m4a" ></audio>
+<audio id="p2" src="p2 (mp3cut.net).m4a" ></audio>
+<audio id="p3" src="p3 (mp3cut.net).m4a" ></audio>
+<audio id="p4" src="p4 (mp3cut.net).m4a" ></audio>
+<audio id="p5" src="p5 (mp3cut.net).m4a" ></audio>
+<audio id="p6" src="p6 (mp3cut.net).m4a" ></audio>
+<audio id="p7" src="p7 (mp3cut.net).m4a" ></audio>
+<audio id="p8" src="p8.m4a" ></audio>
+<audio id="p9" src="t9.m4a"></audio>
+
+
+
+<div class="bigcon"> 
+    <div id="container">
+</div>
+<div class="con">
+
+    <button type="button" onclick="star()" id="start">
+        <img src="start.png">
+        <br>Start
+    </button>
+
+    <div id="tex" ></div>
+
+    <a href="russian.html"><button id="start" type="button" style="font-size: 30px; padding: 15px;"> 🔄️<br>Reload</button></a>
+    
+    <button  id="play" onclick="sound()">
+        <img src="mute.png"><br>Muted
+    </button>
+</div>
+</div>
+
+
+<script>
+    
+
+    var pl = false
+    var def = [true,false,false,false,false,false]
+    var t = {}
+    var ft = true
+    var b = 1
+    var s = false
+    var voice = ['p1','p2','p3','p4','p5','p6','p7','p8','p9']
+
+    function countdown(ad,n){
+        let v = Math.floor(Math.random() * voice.length);
+        if (ft){
+            document.getElementById(voice[v]).play()
+            ft = false
+            setTimeout(function(){ft = true},2000 )}
+            
+        
+        for(let i = 0; i < 3; i++){
+            setTimeout(function(){document.getElementById('tex').innerHTML = i+1 },1000 *i)}
+        setTimeout(function(){document.getElementById('tex').innerHTML = '' },3000)
+        for (let i = 0; i < 3; i++){
+            setTimeout(function() {document.getElementById('tex').innerHTML +=  ' .' } , 3000 + 1000*(i+1));}
+        setTimeout(function(){document.getElementById('tex').style.fontSize = '25px' },7000);
+        setTimeout(function(){document.getElementById('tex').innerHTML = n + ' is '+ ad;},7000); 
+        setTimeout(function(){document.getElementById('tex').style.fontSize = 'xx-large' },12000);
+        setTimeout(function() {document.getElementById('tex').innerHTML = ''; }, 12000);
+        }
+    
+    function sound(){
+        if (s){
+            document.getElementById('play').innerHTML = ' <img src="mute.png"><br>Muted'
+            s = false
+            document.getElementById('theme').pause()
+        }
+        else{
+            document.getElementById('play').innerHTML = ' <img src="sound.png"><br>Muted'
+            s = true
+            document.getElementById('theme').play()
+        }
+    }   
+    
+    function shuffle(array) {
+        array.sort(() => Math.random() - 0.5);
+    }
+
+    function add(){
+        a = inp.value
+        inp.value = ''
+        if (a != ''){
+            z = "'top"+b+"'"
+            b2 = "'"+b+"'"
+            document.getElementById('container').innerHTML += '<div id="'+'top'+b+'" class="top"><button id="cl" class="cl" onclick="clo('+b2+')">(X) Close</button><div class="li" id="l'+b+'">'+a+'</div><div class="sc" id="sc'+b+'">(0/6)</div><button class="lil" id="'+b+'" onclick="shoot('+b+')">Pull The Trigger</button></div>'
+            b += 1
+            t[a] = []
+
+            shuffle(def)
+            for (let i in def){
+                t[a].push(def[i])
+        }}
+        
+    }
+    function clo(a){
+        document.getElementById('top'+a).remove()
+    }
+
+    function star(){
+        pl = true
+        try{
+        for (let i in new Range(0,b-1)){
+            document.getElementById('cl').remove()}
+        }
+        catch{
+            console.log('error')
+        }
+        finally{
+        for(let i = 1 ; i < b ;i++){
+            console.log('top'+i)
+            document.getElementById('top'+ i ).style = 'height: 200px;'
+        }}
+            
+        
+    }
+    function dead(a){
+        let i = 'top'+a
+        let n = document.getElementById('l'+a).innerHTML
+        document.getElementById(i).innerHTML = '<br>'+n+'<br><br>Dead'
+        document.getElementById(i).style.backgroundColor = 'red'
+        
+    }
+
+    function shoot(a){
+        if (pl){
+            let i = 'top'+a
+            n = document.getElementById('l'+a).innerHTML
+            l = []
+            for (let i in t[n]){
+                l.push(t[n][i])
+            }
+            countdown()
+            let index = Math.floor(Math.random() * l.length);
+            if (l[index]){
+                countdown('dead',n)
+                setTimeout(function(){ document.getElementById('shoot').play()}, 5800);
+                setTimeout(function(){dead(a)}, 7000);
+            }
+            else{
+                l.splice(l.indexOf(false), 1);
+                t[n] = l
+                countdown('safe',n)
+                setTimeout(function() {document.getElementById('sc'+a).innerHTML= '('+String(6-l.length)+'/6)'}, 7000);
+                setTimeout(function() {document.getElementById('sc'+a).style.width = (l.length *16).toString()+'%'}, 7000);
+                
+
+            }
+
+        }
+        
+
+    }
+    
+
+</script>
+</html>
